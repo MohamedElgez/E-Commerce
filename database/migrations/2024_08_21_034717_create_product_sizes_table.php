@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('product_sizes', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('product_id')->unsigned();
-            $table->foreign('product_id')->references('id')->on('products');
+            $table->foresign('product_id')->references('id')->on('products');
             $table->string('size');
             $table->timestamps();
         });
